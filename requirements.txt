@@ -4,7 +4,8 @@ sqlalchemy
 psycopg2-binary
 alembic
 python-jose[cryptography]
-passlib[bcrypt]
+passlib
+bcrypt<4.0.0
 python-multipart
 pydantic-settings
 qrcode[pil]
@@ -14,3 +15,5 @@ gspread
 google-auth
 pytest
 httpx
+email-validator
+oauth2client

@@ -7,6 +7,10 @@ def test_signup(client):
     assert response.json()["email"] == "test@example.com"
 
 def test_signup_duplicate_email(client):
+    client.post(
+        "/auth/signup",
+        json={"name": "Test User", "email": "test@example.com", "password": "password123", "is_admin": False}
+    )
     response = client.post(
         "/auth/signup",
         json={"name": "Test User 2", "email": "test@example.com", "password": "password123", "is_admin": False}
@@ -14,6 +18,10 @@ def test_signup_duplicate_email(client):
     assert response.status_code == 400
 
 def test_login(client):
+    client.post(
+        "/auth/signup",
+        json={"name": "Test User", "email": "test@example.com", "password": "password123", "is_admin": False}
+    )
     response = client.post(
         "/auth/login",
         data={"username": "test@example.com", "password": "password123"}
