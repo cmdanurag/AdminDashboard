@@ -25,4 +25,8 @@ Run `docker-compose up --build` to start the API and PostgreSQL instances automa
 Run the test suite using: `pytest`
 
 ## AI Usage Log
-*AI code generation was heavily utilized via Antigravity to quickly prototype and scaffold features including team registration logic, QR codes, PDF certificate generation, CSV/Sheets exports, Docker setup, and this README.*
+
+This project was developed through a structured, collaborative approach:
+- **Foundational Code:** I manually coded the core architecture, database schemas, user authentication (JWT), and the primary Event CRUD operations to ensure a deep, foundational understanding of FastAPI and SQLAlchemy.
+- **Planning Assistance:** AI (Antigravity) was used as an architectural partner to plan the system design and structure the creative feature roadmap.
+- **Advanced Feature Scaffolding:** Due to time constraints, I utilized AI to accelerate the implementation of the advanced "creative" features (QR Code generation, PDF Certificates, Google Sheets export, and Docker containerization). However, these features were implemented with full comprehension of the underlying logic to ensure they seamlessly and securely integrated with the core system I built.
