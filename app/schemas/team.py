@@ -7,7 +7,7 @@ class TeamBase(BaseModel):
     name: str
 
 class TeamCreate(TeamBase):
-    pass
+    event_id: UUID
 
 class TeamUpdate(BaseModel):
     name: Optional[str] = None
